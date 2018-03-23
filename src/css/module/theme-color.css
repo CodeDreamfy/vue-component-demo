@@ -1,0 +1,27 @@
+.theme-wrap {
+  height: 80px;
+  display: flex; justify-content: flex-start; align-items: center;
+  border-bottom: 1px solid #f1f1f1;
+  .tit {
+    height: 80px; line-height: 80px; padding-right: 20px;
+  }
+  .t-list {
+    height: 80px; display: flex; justify-content: space-around;
+    align-items: center; flex: 0 0 500px;
+    a {
+      flex: 0 0 30px; height: 30px; border-radius: 50%; position: relative;
+      &.theme1 { background:linear-gradient(180deg, #0088CC, #0060AE)}
+      &.theme2 { background:linear-gradient(180deg, #ffa12a, #ff6d00)}
+      &.theme3 { background:linear-gradient(180deg, #615150, #1a1b36)}
+      &.theme4 { background:linear-gradient(180deg, #c54c4b, #af3e3a)}
+      &.theme5 { background:linear-gradient(180deg, #43464d, #9ea5b1)}
+      &.theme6 { background:linear-gradient(180deg, #2279c5, #73aee6)}
+      &.theme7 { background:linear-gradient(180deg, #8b9c31, #b8c34d)}
+      &.active:after {
+        content: '';  position: absolute; width: 40px; height: 40px;
+        border: 1px solid #ccc; top: 50%; left: 50%; transform: translate(-50%,-50%);
+        border-radius: 50%; box-shadow: 0 0 6px 0 rgb(218, 216, 216) inset;
+      }
+    }
+  }
+}
