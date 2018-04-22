@@ -6,7 +6,7 @@
         <function-edit @increment="componentAdd"></function-edit>
       </div>
       <div class="common-right">
-        <show-wrap :componentList="componentF"></show-wrap>
+        <show-wrap ref="com-right" :componentList="comList"></show-wrap>
       </div>
     </div>
   </div>
@@ -20,16 +20,13 @@ import ShowWrap from './show-wrap';
 export default {
   data() {
     return {
-      componentF: [],
+      comList: null,
     };
   },
   methods: {
-    componentAdd(component, value) {
-      console.log(component, value); // eslint-disable-line
-      this.componentF.push({
-        name: component,
-        text: value,
-      });
+    componentAdd(component) {
+      this.comList = component;
+      this.$refs['com-right'] && this.$refs['com-right'].heavyLoad(component); // eslint-disable-line
     },
   },
   components: {

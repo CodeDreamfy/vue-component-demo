@@ -6,6 +6,8 @@ import '@/css/main.css';
 import App from './App';
 import router from './router';
 
+const uuidv1 = require('uuid/v1');
+
 Vue.config.productionTip = false;
 Vue.use(Button);
 Vue.use(Select);
@@ -23,6 +25,8 @@ Vue.component('worktime', {
   props: ['text'],
   template: '<div>A Component: {{ text }}</div>',
 });
+
+Vue.prototype.uuid = uuidv1;
 
 new Vue({
   el: '#app',
