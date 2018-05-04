@@ -1,8 +1,66 @@
 export default {
-  background_color: '',
-  properties: [
-    {
-      function: {
+  mode: 'custom',
+  data: {
+    template: {
+      _id: '111122223333444455550051',
+      app_id: '111122223333444455550031',
+      background_color: ' 0xEEEEEE',
+      switch: '111122223333444455550041',
+      properties: [
+        {
+          function_id: '1',
+          type: 'BIG',
+          icon: 'xxxxxx-b',
+          background: 'xxxxxx-c',
+        },
+        {
+          function_id: '2',
+          type: 'BIG',
+          icon: 'xxxxxx-b',
+          background: 'xxxxxx-c',
+        },
+        {
+          function_id: '3',
+          type: 'BIG',
+          icon: 'xxxxxx-b',
+          background: 'xxxxxx-c',
+        },
+        {
+          function_id: '4',
+          type: 'BIG',
+          icon: 'xxxxxx-b',
+          background: 'xxxxxx-c',
+        },
+        {
+          function_id: '5',
+          type: 'MIDDLE',
+          icon: 'xxxxxx-b',
+          background: 'xxxxxx-c',
+        },
+        {
+          function_id: '6',
+          type: 'MIDDLE',
+          icon: 'xxxxxx-b',
+          background: 'xxxxxx-c',
+        },
+        {
+          function_id: '7',
+          type: 'MIDDLE',
+          icon: 'xxxxxx-b',
+          background: 'xxxxxx-c',
+        },
+        {
+          function_id: '8',
+          type: 'MIDDLE',
+          icon: 'xxxxxx-b',
+          background: 'xxxxxx-c',
+        },
+      ],
+    },
+    functions: [
+      {
+        _id: '1',
+        product_id: '111122223333444455550021',
         index: 1,
         name: '布尔值大模块开关',
         subject: 'boolean_big_btn',
@@ -10,28 +68,24 @@ export default {
         up: true,
         down: true,
       },
-      type: 'BIG',
-      icon: '',
-      background: 'file',
-    },
-    {
-      function: {
+      {
+        _id: '2',
+        product_id: '111122223333444455550021',
         index: 2,
         name: '数值型大模块按钮',
         subject: 'number_big_btn',
         type: 'NUMBER',
         up: true,
         down: true,
-        min: 10,
-        max: 30,
-        step: 1,
+        number: {
+          max: 32,
+          min: 18,
+          step: 1,
+        },
       },
-      type: 'BIG',
-      icon: '',
-      background: 'file',
-    },
-    {
-      function: {
+      {
+        _id: '3',
+        product_id: '111122223333444455550021',
         index: 3,
         name: '枚举型大模块按钮',
         subject: 'enum_big_btn',
@@ -40,12 +94,9 @@ export default {
         down: true,
         enum: ['自动', '制热', '除湿', 'ECO', '制冷', '通风'],
       },
-      type: 'BIG',
-      icon: '',
-      background: 'file',
-    },
-    {
-      function: {
+      {
+        _id: '4',
+        product_id: '111122223333444455550021',
         index: 4,
         name: '字符型大模块按钮',
         subject: 'string_big_btn',
@@ -53,12 +104,9 @@ export default {
         up: true,
         down: true,
       },
-      type: 'BIG',
-      icon: '',
-      background: 'file',
-    },
-    {
-      function: {
+      {
+        _id: '5',
+        product_id: '111122223333444455550021',
         index: 5,
         name: '布尔值中模块开关',
         subject: 'boolean_middle_btn',
@@ -66,42 +114,35 @@ export default {
         up: true,
         down: true,
       },
-      type: 'MIDDLE',
-      icon: '',
-      background: 'file',
-    },
-    {
-      function: {
+      {
+        _id: '6',
+        product_id: '111122223333444455550021',
         index: 6,
         name: '数值型中模块按钮',
         subject: 'number_middle_btn',
         type: 'NUMBER',
         up: true,
         down: true,
-        min: 15,
-        max: 30,
-        step: 1,
+        number: {
+          max: 30,
+          min: 15,
+          step: 1,
+        },
       },
-      type: 'MIDDLE',
-      icon: '',
-      background: 'file',
-    },
-    {
-      function: {
+      {
+        _id: '7',
+        product_id: '111122223333444455550021',
         index: 7,
         name: '枚举型中模块按钮',
-        subject: 'enum_middle_btn',
+        subject: 'enum_big_btn',
         type: 'ENUM',
         up: true,
         down: true,
         enum: ['自动', '制热', '除湿', 'ECO', '制冷', '通风'],
       },
-      type: 'MIDDLE',
-      icon: '',
-      background: 'file',
-    },
-    {
-      function: {
+      {
+        _id: '8',
+        product_id: '111122223333444455550021',
         index: 8,
         name: '字符型中模块按钮',
         subject: 'string_middle_btn',
@@ -109,61 +150,6 @@ export default {
         up: true,
         down: true,
       },
-      type: 'MIDDLE',
-      icon: '',
-      background: 'file',
-    },
-    {
-      function: {
-        index: 9,
-        name: '字符型小模块按钮1',
-        subject: 'string_small_btn',
-        type: 'STRING',
-        up: true,
-        down: true,
-      },
-      type: 'SMALL',
-      icon: '',
-      background: 'file',
-    },
-    {
-      function: {
-        index: 10,
-        name: '字符型小模块按钮2',
-        subject: 'string_small_btn',
-        type: 'STRING',
-        up: true,
-        down: true,
-      },
-      type: 'SMALL',
-      icon: '',
-      background: 'file',
-    },
-    {
-      function: {
-        index: 11,
-        name: '字符型小模块按钮3',
-        subject: 'string_small_btn',
-        type: 'STRING',
-        up: true,
-        down: true,
-      },
-      type: 'SMALL',
-      icon: '',
-      background: 'file',
-    },
-    {
-      function: {
-        index: 12,
-        name: '字符型小模块按钮4',
-        subject: 'string_small_btn',
-        type: 'STRING',
-        up: true,
-        down: true,
-      },
-      type: 'SMALL',
-      icon: '',
-      background: 'file',
-    },
-  ],
+    ],
+  },
 };

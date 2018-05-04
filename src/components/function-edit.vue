@@ -1,11 +1,11 @@
 <template>
   <div class="function-edit">
     <ul class="content-list">
-      <template v-for="(item, index) in resData.properties">
-        <li :key="item.function.index" >
+      <template v-for="(item, index) in resData.template.properties">
+        <li :key="item.function_id" >
           <span class="drag-handle">☰</span>
           <div class="outerbox">
-            <span class="model-tit">{{ item.function.name }}</span>
+            <span class="model-tit">{{ filterFunction(item.function_id) }}</span>
             <div class="model-content">
               <el-select class="selectItem"
                 @change="increment(...arguments, index)"
@@ -43,6 +43,7 @@ export default {
   data() {
     return {
       arr: [],
+      resData: null,
       modelSize: [
         {
           value: 'BIG',
@@ -63,20 +64,21 @@ export default {
       ],
     };
   },
-  computed: {
-    resData() {
-      return rData;
-    },
-  },
+  computed: {},
   methods: {
+    filterFunction(val) {
+      var c =  this.resData.functions.find(elem => elem._id === val);  // eslint-disable-line
+      return c.name;
+    },
     increment(value, index) {
-      this.resData.properties[index].type = value;
+      this.resData.template.properties[index].type = value;
     },
     emmit() {
       this.$emit('increment', this.resData);
     },
   },
   created() {
+    this.resData = rData.data;
     this.$emit('increment', this.resData);
   },
 };
